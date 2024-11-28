@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="HighScoreTablePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1000.0" style="-fx-background-color: #3489eb;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cs230gamewithjavafx.HighScoreController">
+    <top>
+        <Label contentDisplay="CENTER" prefHeight="58.0" prefWidth="274.0" text="High Scores" textAlignment="CENTER" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="51.0" />
+            </font>
+        </Label>
+    </top>
+    <center>
+        <SplitPane dividerPositions="0.5" orientation="VERTICAL" style="-fx-background-color: #3489eb;">
+        <ChoiceBox fx:id="levelSelect" />
+
+        <TableView fx:id="table" prefHeight="125.0" prefWidth="600.0" style="-fx-background-color: #3489eb;" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="levelColumn" prefWidth="74.39999085664749" text="Level Number" />
+                <TableColumn fx:id="nameColumn" prefWidth="319.2000274658203" text="Player Name" />
+                <TableColumn fx:id="scoreColumn" prefWidth="75.0" text="Scores" />
+            </columns>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+            </BorderPane.margin>
+        </TableView>
+        </SplitPane>
+    </center>
+    <bottom>
+        <Button fx:id="backButton" mnemonicParsing="false" onAction="#handleBackButtonAction" text="Back" BorderPane.alignment="CENTER" />
+    </bottom>
+</BorderPane>
